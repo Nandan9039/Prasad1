@@ -7,7 +7,7 @@
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<name>NumberGenerator</name>
-	<url>http://54.209.29.89:9000</url>
+	<url>http://localhost:8084</url>
 	<dependencies>
 		<dependency>
                 <groupId>org.sonarsource.scanner.maven</groupId>
@@ -30,9 +30,9 @@
 </activation>
 <properties>
 <sonar.host.url>
-http://54.209.29.89:9000
+http://localhost:8084
 </sonar.host.url>
-	<sonar.login>59f85c2b9e65634b6d71776e1e5d6dc07ab18ee9</sonar.login>
+	<sonar.login>4067d5a7602fb1fd711908d27859014eb816a4b6</sonar.login>
 	<sonar.projectkey>first</sonar.projectkey>
 </properties>
 </profile>
