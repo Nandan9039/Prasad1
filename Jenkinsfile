@@ -1,10 +1,3 @@
-def version = "1.0.0-release"
-def artifactId ="demo-app"
-def groupId = "com.siemens.devops"
-def appName = "demo-app"
-def JfrogUrl ="http://localhost:8082/artifactory/logic-ops-lab-libs-release/"
-
-
 
 pipeline {
      agent any
@@ -19,6 +12,13 @@ pipeline {
       
             }
       }
+  }
+  stage('publish'){
+  steps{
+      script{
+          bat ''' curl -vk -u admin:Admin1234 --upload-file target/NumberGenerator-1.0-SNAPSHOT.jar http://localhost:8082/artifactory/logic-ops-lab-libs-snapshot/ '''
+      }
+  }
   }
   
   }
